@@ -28,4 +28,19 @@ class registrarAtividadeController extends Controller
         $ids = modeloAgenda::all();
         return view('paginas.consultar', compact('ids'));
     }
+
+    public function editar($id){
+        $dado = modeloAgenda::findOrFail($id);
+        return view('paginas.editar', compact('dado'));
+    }
+
+    public function atualizar(Request $request, $id){
+        modeloAgenda::where('id', $id)-> update($request->all());
+        return redirect('/consultar');
+    }
+
+    public function excluir(Request $request, $id){
+        modeloAgenda::where('id', $id)->delete($request->all());
+        return redirect('/consultar');
+    }
 }

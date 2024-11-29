@@ -10,6 +10,6 @@
         <br><br>
 
         <button type="submit">Salvar</button>
-        <a href="paginas/index"><button>Voltar</button></a>
     </form>
+    <a href="/index"><button>Voltar</button></a>
 </x-layout>
