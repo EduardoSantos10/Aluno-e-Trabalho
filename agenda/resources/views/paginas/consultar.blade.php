@@ -5,9 +5,10 @@
                 <thead>
                     <tr>
                         <th>Código</th>
-                        <th>Data</th>
-                        <th>Descrição</th>
-                        <th>Modificar</th>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Telefone</th>
+                        <th>Endereço</th>
                     </tr>
                 </thead>
 
@@ -16,8 +17,10 @@
                     <tr>
 
                         <th>{{$id->id}}</th>
-                        <td>{{$id->dataEvento}}</td>
-                        <td>{{$id->descricao}}</td>
+                        <td>{{$id->nome}}</td>
+                        <td>{{$id->idade}}</td>
+                        <td>{{$id->telefone}}</td>
+                        <td>{{$id->endereco}}</td>
                         <td>
                             <a href="/editar/{{$id->id}}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">

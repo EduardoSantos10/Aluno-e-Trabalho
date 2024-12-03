@@ -14,6 +14,14 @@ Route::get('/cadastrar', function(){
     return view('paginas/cadastrar');
 });
 
+Route::get('/atualizar', function(){
+    return view('paginas/atualizar');
+});
+
+Route::get('/excluir', function(){
+    return view('paginas/excluir');
+});
+
 Route::get('/cadastrar', [\App\Http\Controllers\registrarAtividadeController::class, 'index']);
 Route::get('/cadastrar/salvar', [App\Http\Controllers\registrarAtividadeController::class, 'store']);
 Route::get('/consultar', [\App\Http\Controllers\registrarAtividadeController::class, 'consultar']);

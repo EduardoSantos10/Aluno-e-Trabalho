@@ -13,7 +13,11 @@
         <br><br>
  
         <button type="submit">Atualizar</button>
+
+        
     </form>
+
+    <a href="/index"><button>Voltar</button></a>
 
 
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
