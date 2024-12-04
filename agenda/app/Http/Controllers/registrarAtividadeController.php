@@ -42,7 +42,7 @@ class registrarAtividadeController extends Controller
 
     public function atualizar(Request $request, $id){
         modeloAluno::where('id', $id)-> update($request->all());
-        return redirect('/atualizar');
+        return redirect('/consultar');
     }
 
     public function excluir(Request $request, $id){

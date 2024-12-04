@@ -1,20 +1,24 @@
 <x-layout titulo="Cadastrar">
-    <form action="cadastrar/salvar" method="GET">
+    <form action="cadastrarTrabalho/salvar" method="GET">
 
         @csrf <!-- Libera as Portas de cadastro -->
-        <label name="nome">Nome do Aluno</label>
+        <label name="tema">Tema do Trabalho</label>
         <input type="text" name="nome"><br><br>
 
-        <label name="idade">Idade</label>
-        <textArea type="number" name="idade"></textArea>
+        <label name="materia">Selecionar Materia</label>
+        <textArea type="text" name="text"></textArea>
         <br><br>
 
-        <label name="telefone">Telefone</label>
-        <textArea type="number" name="telefone"></textArea>
+        <label name="dataInicio">Data de Inicio do Trabalho</label>
+        <textArea type="dateTime" name="dataInicio"></textArea>
         <br><br>
 
-        <label name="endereco">Endereço</label>
-        <textArea type="number" name="endereco"></textArea>
+        <label name="dataTermino">Data de Conclusão</label>
+        <textArea type="dateTime" name="dataTermino"></textArea>
+        <br><br>
+
+        <label name="nota">Nota Final</label>
+        <textArea type="text" name="nota"></textArea>
         <br><br>
 
         <button type="submit">Salvar</button>

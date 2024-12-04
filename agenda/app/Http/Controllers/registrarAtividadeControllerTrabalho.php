@@ -2,28 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\modeloAluno;
+use App\Models\modeloTrabalho;
 use Illuminate\Http\Request;
 use App\Models\modeloAgenda;
 
-class registrarAtividadeController extends Controller
+class registrarAtividadeControllerTrabalho extends Controller
 {
     public function index(){
-        $dados = modeloAluno::all();// Todos os dados do banco
-        return view('paginas.cadastrar')->with('dados', $dados);
+        $dados = modeloTrabalho::all();// Todos os dados do banco
+        return view('paginas.cadastrarTrabalho')->with('dados', $dados);
     }
 
     public function store(Request $request){
-        $nome = $request->input('nome');
-        $idade = $request->input('idade');
-        $telefone = $request->input('telefone');
-        $endereco = $request->input('endereco');
+        $tema = $request->input('tema');
+        $materia = $request->input('materia');
+        $dataInicio = $request->input('dataInicio');
+        $dataTermino = $request->input('dataTermino');
+        $nota = $request->input('nota');
 
-        $model = new modeloAluno();
-        $model->nome = $nome;
-        $model->idade = $idade;
-        $model->telefone = $telefone;
-        $model->endereco = $endereco;
+        $model = new modeloTrabalho();
+        $model->tema = $tema;
+        $model->materia = $materia;
+        $model->dataInicio = $dataInicio;
+        $model->dataTermino = $dataTermino;
+        $model->nota = $nota;
+        
 
         $model->save(); //Armazena no BD
         return redirect('/cadastrar');
@@ -31,22 +34,22 @@ class registrarAtividadeController extends Controller
 
 
     public function consultar(){
-        $ids = modeloAluno::all();
+        $ids = modeloTrabalho::all();
         return view('paginas.consultar', compact('ids'));
     }
 
     public function editar($id){
-        $dado = modeloAluno::findOrFail($id);
+        $dado = modeloTrabalho::findOrFail($id);
         return view('paginas.editar', compact('dado'));
     }
 
     public function atualizar(Request $request, $id){
-        modeloAluno::where('id', $id)-> update($request->all());
+        modeloTrabalho::where('id', $id)-> update($request->all());
         return redirect('/atualizar');
     }
 
     public function excluir(Request $request, $id){
-        modeloAluno::where('id', $id)->delete($request->all());
+        modeloTrabalho::where('id', $id)->delete($request->all());
         return redirect('/excluir');
     }
 }

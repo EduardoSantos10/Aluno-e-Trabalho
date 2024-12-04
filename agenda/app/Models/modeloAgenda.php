@@ -10,3 +10,6 @@ class modeloAgenda extends Model
     use HasFactory;
     protected $table = 'registro'; #nome do banco
 }
+
+
+

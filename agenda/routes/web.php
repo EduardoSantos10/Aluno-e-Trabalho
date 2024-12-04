@@ -28,3 +28,6 @@ Route::get('/consultar', [\App\Http\Controllers\registrarAtividadeController::cl
 Route::get('/editar/{id}',[\App\Http\Controllers\registrarAtividadeController::class, 'editar']);
 Route::get('/atualizar/{id}',[\App\Http\Controllers\registrarAtividadeController::class, 'atualizar']);
 Route::get('/excluir/{id}',[\App\Http\Controllers\registrarAtividadeController::class, 'excluir']);
+
+Route::get('/cadastrarTrabalho',[\App\Http\Controllers\registrarAtividadeControllerTrabalho::class, 'index']);
+Route::get('/cadastrarTrabalho/salvar',[App\Http\Controllers\registrarAtividadeControllerTrabalho::class, 'store']);
