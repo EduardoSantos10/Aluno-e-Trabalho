@@ -31,3 +31,9 @@ Route::get('/excluir/{id}',[\App\Http\Controllers\registrarAtividadeController::
 
 Route::get('/cadastrarTrabalho',[\App\Http\Controllers\registrarAtividadeControllerTrabalho::class, 'index']);
 Route::get('/cadastrarTrabalho/salvar',[App\Http\Controllers\registrarAtividadeControllerTrabalho::class, 'store']);
+Route::get('/consultarTrabalho', [\App\Http\Controllers\registrarAtividadeControllerTrabalho::class, 'consultar']);
+Route::get('/editarTrabalho/{id}',[\App\Http\Controllers\registrarAtividadeControllerTrabalho::class, 'editar']);
+Route::get('/atualizarTrabalho/{id}',[\App\Http\Controllers\registrarAtividadeControllerTrabalho::class, 'atualizar']);
+Route::get('/excluirTrabalho/{id}',[\App\Http\Controllers\registrarAtividadeControllerTrabalho::class, 'excluir']);
+
+

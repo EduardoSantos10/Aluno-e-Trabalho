@@ -47,7 +47,7 @@ class registrarAtividadeController extends Controller
 
     public function excluir(Request $request, $id){
         modeloAluno::where('id', $id)->delete($request->all());
-        return redirect('/excluir');
+        return redirect('/consultar');
     }
 }
 

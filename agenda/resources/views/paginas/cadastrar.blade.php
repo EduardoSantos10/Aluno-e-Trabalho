@@ -6,15 +6,15 @@
         <input type="text" name="nome"><br><br>
 
         <label name="idade">Idade</label>
-        <textArea type="number" name="idade"></textArea>
+        <input type="text" name="idade"></input>
         <br><br>
 
         <label name="telefone">Telefone</label>
-        <textArea type="number" name="telefone"></textArea>
+        <input type="text" name="telefone"></input>
         <br><br>
 
         <label name="endereco">Endereço</label>
-        <textArea type="number" name="endereco"></textArea>
+        <input type="text" name="endereco"></input>
         <br><br>
 
         <button type="submit">Salvar</button>

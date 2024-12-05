@@ -29,28 +29,28 @@ class registrarAtividadeControllerTrabalho extends Controller
         
 
         $model->save(); //Armazena no BD
-        return redirect('/cadastrar');
+        return redirect('/cadastrarTrabalho');
     }
 
 
     public function consultar(){
         $ids = modeloTrabalho::all();
-        return view('paginas.consultar', compact('ids'));
+        return view('paginas.consultarTrabalho', compact('ids'));
     }
 
     public function editar($id){
         $dado = modeloTrabalho::findOrFail($id);
-        return view('paginas.editar', compact('dado'));
+        return view('paginas.editarTrabalho', compact('dado'));
     }
 
     public function atualizar(Request $request, $id){
         modeloTrabalho::where('id', $id)-> update($request->all());
-        return redirect('/atualizar');
+        return redirect('/consultarTrabalho');
     }
 
     public function excluir(Request $request, $id){
         modeloTrabalho::where('id', $id)->delete($request->all());
-        return redirect('/excluir');
+        return redirect('/consultarTrabalho');
     }
 }
 

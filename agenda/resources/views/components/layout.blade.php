@@ -8,7 +8,7 @@
 </head>
 
 
-<body>
+<body style="background-color:#FF4500;">
 
     <h1>{{$titulo}}</h1>
 

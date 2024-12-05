@@ -15,8 +15,8 @@ return new class extends Migration
             $table->increments('id');
             $table->text('tema');
             $table->text('materia');
-            $table->dateTime('dataInicio');
-            $table->dateTime('dataTermino');
+            $table->date('dataInicio');
+            $table->date('dataTermino');
             $table->text('nota');
             $table->timestamps(); //registra dia, mes, ano e hora
         });

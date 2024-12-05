@@ -1,11 +1,12 @@
 <x-layout titulo="Atualizar">
     <form action="atualizar/salvar" method="GET">
 
-        <label name="nome">Atualizar Nome</label>
-        <input type="text" name="nome"><br><br>
 
-        <label name="idade">Idade</label>
-        <textArea type="text" name="idade"></textArea>
+        <label name="metodoAtualizar">Atualizar Dado</label>
+        <input type="date" name="dataEvento"><br><br>
+
+        <label name="descricao">Descrição</label>
+        <textArea type="text" name="descricaoTexto"></textArea>
         <br><br>
 
         <button type="submit">Salvar</button>
